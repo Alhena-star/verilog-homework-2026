@@ -6,6 +6,25 @@
 
 **第一次提交只注册身份；注册通过后，再提交课程作业。** 本说明不包含具体实验题目，`HW01`、`HW02` 及文件名均为提交流程示例，不代表已发布的作业。具体任务、软件版本、提交格式和截止时间以教师发布的要求为准。
 
+## [第一次提交](https://github.com/rosickey/verilog-homework-2026#%E4%BA%8Cwindows-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
+
+> [第一次提交成绩](https://github.com/rosickey/verilog-homework-2026/tree/main/grades/registration-grades.md)
+
+## 以下同学未提交
+
+| 学号 | 姓名 | 班级 |
+| --- | --- | --- |
+| 240210115 | 李诗瀚 | 2402101 |
+| 240210142 | 张钲明 | 2402101 |
+| 240210233 | 李俊杰 | 2402102 |
+
+## [第一次作业HW01](https://github.com/rosickey/verilog-homework-2026/tree/main/assignments/HW01)
+
+- 1.作业严格按照文件名规则提交！
+- 2.代码风格严格按照课本统一标准。例如，不能使用“.” .clk这种形式表示参量
+- 3.不符合merge合并都已经reverse撤销
+- 4.请严格按照上述要求修改，检查后，再次慎重提交PR
+
 
 ## 一、必须遵守的规则
 
@@ -271,6 +290,7 @@ git status
 ```
 
 如有未处理的本地改动，先确认并妥善保存；不要直接覆盖文件。确认可以同步后执行：
+每次执行一条指令，不要全复制，确认无误后，再继续！
 
 ```bash
 git fetch upstream
@@ -288,7 +308,7 @@ git merge --no-edit upstream/main
 mkdir -p students/240201101/HW01
 ```
 
-将要求的文件放入该目录。以下只是结构示例，文件名应按实际任务调整：
+执行上述命令后，再鼠标操作，将要求的文件放入上述目录。以下只是结构示例，文件名应按实际任务调整：
 
 | 示例路径 | 说明 |
 | --- | --- |
@@ -298,6 +318,7 @@ mkdir -p students/240201101/HW01
 | `students/240201101/HW01/report.pdf` | 仅在任务要求报告时提交 |
 | `students/240201101/HW02/` | 后续第二次作业目录，不是新分支 |
 
+后续作业将目录和提交信息中的 `HW01` 换成相应编号。
 不要把别人的文件或课程公共文件复制进本次提交中。提交前保存编辑器、仿真软件或工程中的最新修改，并按作业要求完成本地检查。
 
 ### 4. 检查并提交
@@ -325,7 +346,8 @@ git push origin 240201101
 
 ### 5. 创建作业 PR
 
-PR 方向仍为本人 Fork 的学号分支，到 `rosickey/verilog-homework-2026` 的 `main`。
+在 GitHub 打开自己的 页面仓库，第4步如果正确，页面会出现**Compare & pull request**横幅。
+ 点击 **Compare & pull request**；没有提示时可通过 **Contribute → Open pull request** 或 **Pull requests → New pull request** 进入比较页面，必要时选择 **compare across forks**。
 
 标题格式为 `[学号] 作业编号 - 姓名`，例如：
 
@@ -359,7 +381,6 @@ git push origin 240201101
 
 原 PR 会自动更新；已启用的检查也会重新运行。若原 PR 已合并，先同步教师仓库，再按教师要求提交修订并创建新的 PR。
 
-需要提交报告或导出图纸的作业，修改源文件后记得重新生成对应输出文件。
 
 ## 六、常见问题
 
