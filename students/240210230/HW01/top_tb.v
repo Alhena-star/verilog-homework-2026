@@ -1,39 +1,23 @@
 module top_tb;
-wire clk;
-reg en;       // ✅ 重点！reg！不是wire
-reg cr;       // ✅ 重点！reg！不是wire
-wire [9:0] q;
-
-// 例化时钟
-clk_gen u_clk(
-    .clk(clk)
-);
-
-// 例化cd4017
-cd4017 u_cd4017(
-    .clk(clk),
-    .en(en),
-    .cr(cr),
-    .q(q)
-);
-
-// 导出波形
-initial begin
-    $dumpfile("wave.vcd");
-    $dumpvars(0, top_tb);
-end
-
-initial begin
-    cr = 1'b1;
-    en = 1'b0;
-    #20 cr = 1'b0;
-    en = 1'b1;
-    #300 $finish;
-end
-
-initial begin
-    $monitor("time=%0t, clk=%b, en=%b, cr=%b, q=%b",$time,clk,en,cr,q);
-end
-
+	wire clk;
+	reg en;
+	reg clr;
+	wire[9:0] q;
+	
+	clk_gen u_clk(clk);
+	cd4017 u_cd4017(clk,en,clr,q);
+	
+	initial
+	begin
+		$dumpfile("top_tb.vcd");
+		$dumpvars();
+		en=1;
+		clr=1;
+		#25 clr=0;
+		#180 en=0;
+		#70 en=1;
+		#70 clr=1;
+		#20 clr=0;
+		#50 $finish();
+	end
 endmodule
-
