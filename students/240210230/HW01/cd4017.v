@@ -11,3 +11,4 @@ module cd4017(clk,en,clr,q);
 			q<={q[8:0],q[9]};
 	end
 endmodule
+// !!! v2 新版本提交 2026.11.07
