@@ -1,23 +1,26 @@
+`timescale 1ns/1ps
 module top_tb;
     wire clk;
-    wire rst;
+    reg en;
+    reg clr;
     wire [9:0] q;
-    wire led0, led1, led2, led3, led4, led5, led6, led7;
 
-    clk_gen u1(clk);
-    cd4017 u2(clk, rst, q);
-    led u3(q[0], led0);
-    led u4(q[1], led1);
-    led u5(q[2], led2);
-    led u6(q[3], led3);
-    led u7(q[4], led4);
-    led u8(q[5], led5);
-    led u9(q[6], led6);
-    led u10(q[7], led7);
+    clk_gen u_clk_gen(clk);
+    CD4017 u_cd4017(clk,en,clr,q);
 
-    initial begin
-        rst = 1'b1;
-        #5 rst = 1'b0;
-        #200 $stop;
+    initial
+    begin
+        $dumpfile("cd4017.vcd");
+        $dumpvars(0,top_tb);
+
+        en = 1'b0;
+        clr = 1'b1;
+        #25 clr = 1'b0;
+        #20 en = 1'b1;
+        #240 en = 1'b0;
+        #60 en = 1'b1;
+        #40 clr = 1'b1;
+        #20 clr = 1'b0;
+        #220 $finish;
     end
 endmodule
