@@ -6,7 +6,6 @@ module CD4017(clk, en, clr, q);
 
 		reg [3:0] count;
 		assign q = 10'b1 << count; 
-
 always @(posedge clk or posedge clr) begin
     		if(clr)
 			 count <= 4'd0;
