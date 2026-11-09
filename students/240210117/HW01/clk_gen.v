@@ -1,17 +1,8 @@
-// ============================================================
-// 240210117 乐奕子豪  HW01  :  时钟激励模块（课堂订正版）
-// ------------------------------------------------------------
-// 输出 50 MHz 方波：半周期 10 ns，整周期 20 ns。
-// 作业要求必须使用课堂已经订正的 clk_gen.v，本文件与其保持一致。
-// ============================================================
-`timescale 1ns / 1ps
-
-module clk_gen (clk);
-    output clk;
-    reg    clk;
-
-    initial begin
-        clk = 1'b0;
-        forever #10 clk = ~clk;
-    end
+module clk_gen(clk);
+output reg clk;
+initial
+begin
+    clk = 0;
+    forever #10 clk = ~clk;
+end
 endmodule
