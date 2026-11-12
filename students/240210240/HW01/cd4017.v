@@ -1,4 +1,4 @@
-module CD4017(clk, en, clr, q);
+module cd4017(clk, en, clr, q);
 		input clk;
 		input en;
 		input clr;
