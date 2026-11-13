@@ -12,29 +12,15 @@
 
 ## [第一次作业HW01](https://github.com/rosickey/verilog-homework-2026/tree/main/assignments/HW01)
 
+> [HW01成绩](https://github.com/rosickey/verilog-homework-2026/tree/main/grades/HW01-grades.md)
+
+## [第二次作业](https://github.com/rosickey/verilog-homework-2026/tree/main/assignments/HW02)
+
 - 1.作业严格按照文件名规则提交！
 - 2.代码风格严格按照课本统一标准。例如，**不能使用“.” .clk这种形式表示参量** **不能使用“.” .clk这种形式表示参量** **不能使用“.” .clk这种形式表示参量**
 - 3.不符合merge合并都已经reverse撤销
 - 4.请严格按照上述要求修改，检查后，再次慎重提交PR
 
-## 未通过的 PR
-
-| PR | 学号 | 姓名 | 作业 | 原因 |
-| --- | --- | --- | --- | --- |
-| 297 | 240210235 | 胡志斌 | HW01 | 作业 PR 不得新增、修改、删除或重命名任何 .student.yml：students/240210235/.student.yml |
-| 299 | 240210245 | 占立威 | HW01 | 文件名不在 HW01.allowed_files 列表中（重命名原路径也须符合）：students/240210245/HW01/top_ tb.v |
-| 300 | 240210111 | 陈晓薇 | HW01 | 只能修改本人学号目录，禁止修改他人目录或公共文件：HW01/report.png |
-| 303 | 240210240 | 游鹏 | HW01 | 文件名不在 HW01.allowed_files 列表中（重命名原路径也须符合）：students/240210240/HW01/CD4017.v |
-| 304 | 240210119 | 黄屿可 | HW01 | PR 文件清单为空或不完整 |
-| 305 | 240210125 | 郗哲 | HW01 | 作业 PR 不得新增、修改、删除或重命名任何 .student.yml：students/240210125/.student.yml |
-| 309 | 240210127 | 邹扬 | HW01 | 只能修改本人学号目录，禁止修改他人目录或公共文件：cd4017.v |
-
-
-## HW01 未提交PR
-
-| 学号 | 学号 | 学号 | 学号 |
-| --- | --- | --- | --- |
-| 240210130 | 240210144 | 240210147 | 240210206 |
 
 
 ## 一、必须遵守的规则
